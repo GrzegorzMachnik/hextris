@@ -2,7 +2,7 @@ $(document).ready(function () {
 	initialize();
 });
 function initialize(a) {
-	window.baseUrl = 'http://localhost:7071/api/LeaderBoard/';
+	window.baseUrl = 'https://avengagamejs-api.azurewebsites.net/api/leaderboard';
 	window.userId = new URLSearchParams(window.location.search).get('userId');
 	window.rush = 1;
 	window.lastTime = Date.now();
