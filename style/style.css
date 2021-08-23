@@ -95,8 +95,7 @@ button:focus {
 	color:#232323;
 	cursor:pointer;
 	top:0;
-	left:0;
-
+	right: 0;
 }
 
 
@@ -525,3 +524,6 @@ body {
 	-moz-transform:translate(-50%, 0%);
 	-ms-transform:translate(-50%, 0%);
 }
+
+
+div#logo {}

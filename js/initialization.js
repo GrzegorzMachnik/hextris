@@ -2,8 +2,8 @@ $(document).ready(function () {
 	initialize();
 });
 function initialize(a) {
-	window.baseUrl = 'https://avengagamejs-api.azurewebsites.net/api/leaderboard';
-	// window.baseUrl = 'http://localhost:7071/api/leaderboard';
+	window.baseUrl = 'https://avengagamejs-api.azurewebsites.net/api/leaderboard/';
+	// window.baseUrl = 'http://localhost:7071/api/leaderboard/';
 	window.userId = new URLSearchParams(window.location.search).get('userId');
 	if (!userId) {
 		window.location.href = 'https://agreeable-tree-020f8c803.azurestaticapps.net/register'
@@ -11,19 +11,19 @@ function initialize(a) {
 	window.rush = 1;
 	window.lastTime = Date.now();
 	window.iframHasLoaded = false;
-	window.colors = ["#e74c3c", "#f1c40f", "#3498db", "#2ecc71"];
+	window.colors = ["#FF3607", "#FFB300", "#00B5FF", "#00960A"];
 	window.hexColorsToTintedColors = {
-		"#e74c3c": "rgb(241,163,155)",
-		"#f1c40f": "rgb(246,223,133)",
-		"#3498db": "rgb(151,201,235)",
-		"#2ecc71": "rgb(150,227,183)"
+		"#FF3607": "rgb(241,163,155)",
+		"#FFB300": "rgb(246,223,133)",
+		"#00B5FF": "rgb(151,201,235)",
+		"#00960A": "rgb(150,227,183)"
 	};
 
 	window.rgbToHex = {
-		"rgb(231,76,60)": "#e74c3c",
-		"rgb(241,196,15)": "#f1c40f",
-		"rgb(52,152,219)": "#3498db",
-		"rgb(46,204,113)": "#2ecc71"
+		"rgb(231,76,60)": "#FF3607",
+		"rgb(241,196,15)": "#FFB300",
+		"rgb(52,152,219)": "#00B5FF",
+		"rgb(46,204,113)": "#00960A"
 	};
 
 	window.rgbColorsToTintedColors = {
@@ -33,8 +33,8 @@ function initialize(a) {
 		"rgb(46,204,113)": "rgb(150,227,183)"
 	};
 
-	window.hexagonBackgroundColor = 'rgb(236, 240, 241)';
-	window.hexagonBackgroundColorClear = 'rgba(236, 240, 241, 0.5)';
+	window.hexagonBackgroundColor = 'rgb(255, 255, 255)';
+	window.hexagonBackgroundColorClear = 'rgba(255, 255, 255, 0.5)';
 	window.centerBlue = 'rgb(44,62,80)';
 	window.angularVelocityConst = 4;
 	window.scoreOpacity = 0;
@@ -247,7 +247,7 @@ function startBtnHandler() {
 		grecaptcha.execute().then((token) => {
 			$.ajax({
 				type: 'PUT',
-				url: baseUrl + userId + "/Game",
+				url: baseUrl + "/Game/" + userId,
 				contentType: 'application/json',
 				data: JSON.stringify({ token: token })
 			})

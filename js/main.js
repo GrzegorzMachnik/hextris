@@ -381,7 +381,7 @@ function postHighScore() {
 	grecaptcha.execute().then((token) => {
 		$.ajax({
 			type: 'PUT',
-			url: baseUrl + userId + "/Score",
+			url: baseUrl + "/Score/" + userId,
 			contentType: 'application/json',
 			data: JSON.stringify({ score: score.toString(), token: token })
 		})
