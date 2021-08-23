@@ -3,7 +3,11 @@ $(document).ready(function () {
 });
 function initialize(a) {
 	window.baseUrl = 'https://avengagamejs-api.azurewebsites.net/api/leaderboard';
+	// window.baseUrl = 'http://localhost:7071/api/leaderboard';
 	window.userId = new URLSearchParams(window.location.search).get('userId');
+	if (!userId) {
+		window.location.href = 'https://agreeable-tree-020f8c803.azurestaticapps.net/register'
+	}
 	window.rush = 1;
 	window.lastTime = Date.now();
 	window.iframHasLoaded = false;
