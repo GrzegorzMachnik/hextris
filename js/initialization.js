@@ -2,9 +2,9 @@ $(document).ready(function () {
 	initialize();
 });
 function initialize(a) {
-	window.baseUrl = 'https://avengagamejs-api.azurewebsites.net/api/leaderboard/';
+	window.baseUrl = 'https://avengagamejs-api.azurewebsites.net/api/leaderboard';
 	window.leaderBoardUrl = 'https://leaderboard.avenga.com.pl';
-	// window.baseUrl = 'http://localhost:7071/api/leaderboard/';
+	// window.baseUrl = 'http://localhost:7071/api/leaderboard';
 	window.userId = new URLSearchParams(window.location.search).get('userId');
 	if (!userId) {
 		window.location.href = leaderBoardUrl + '/register'
@@ -279,19 +279,9 @@ function handleClick(e) {
 function handleTapBefore(e) {
 	var x = e.changedTouches[0].clientX;
 	var y = e.changedTouches[0].clientY;
-
-	if (x < 120 && y < 83 && $('.helpText').is(':visible')) {
-		showHelp();
-		return;
-	}
 }
 
 function handleClickBefore(e) {
 	var x = e.clientX;
 	var y = e.clientY;
-
-	if (x < 120 && y < 83 && $('.helpText').is(':visible')) {
-		showHelp();
-		return;
-	}
 }

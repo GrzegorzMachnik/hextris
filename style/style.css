@@ -15,9 +15,8 @@
 	width:250px;
 	overflow:visible;
 	margin-left:-175px;
-	font-family:Exo;
-
 }
+
 #container {
 	color:#232323;
 	position:absolute;
@@ -25,7 +24,7 @@
 	top:calc(50%);
 	text-align:center;
 	transform:translate(-50%, -50%);
-	font-family:Exo;
+	font-family: TTHoves-Regular,helvetica,arial,verdana,sans-serif;
 	-webkit-transform:translate(-50%, -50%);
 	-moz-transform:translate(-50%, -50%);
 	-ms-transform:translate(-50%, -50%);
@@ -102,7 +101,7 @@ button:focus {
 #pauseBtn {
 	display:none;
 	position:fixed;
-	margin-bottom:7px;
+	margin-top: 7px;
 	width:72px;
 	height:72px;
 	margin-right:11px;
@@ -110,7 +109,7 @@ button:focus {
 	color:#232323;
 	cursor:pointer;
 	right:0;
-	bottom:0;
+	top: 0;
 	z-index:99;
 }
 
@@ -364,7 +363,7 @@ button:focus {
 
 body {
 	color:#ecf0f1;
-	font-family:'Exo', sans-serif;
+	font-family: TTHoves-Regular,helvetica,arial,verdana,sans-serif;
 	background-color:#ecf0f1;
 }
 
@@ -442,21 +441,11 @@ body {
 #gameoverscreen {
 	padding:8px;
 }
-@font-face {
-	font-family:Exo;
-	font-weight:light;
-	src:url("./fonts/Exo2-ExtraLight.otf") format("opentype");
-}
 
 @font-face {
-	font-family:Exo;
-	src:url("./fonts/Exo2-Regular.otf") format("opentype");
-}
-
-@font-face {
-	font-family:Exo;
-	font-weight:bold;
-	src:url("./fonts/Exo2-SemiBold.otf") format("opentype");
+	font-family:TTHoves-Regular;
+	font-weight: normal;
+	src:url("./fonts/TT-Hoves-Regular.otf") format("opentype");
 }
 
 .GOTitle {
@@ -483,9 +472,6 @@ body {
 	font-weight:light;
 	line-height:18px;
 }
-
-
-
 
 #bottomContainer {
 	position:absolute;
@@ -526,4 +512,6 @@ body {
 }
 
 
-div#logo {}
+#logo {
+    margin: 10px 0 0 10px;
+}
